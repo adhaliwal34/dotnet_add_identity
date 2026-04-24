@@ -44,7 +44,7 @@ The `dotnet_set_up_identity.py` script will:
 # How to use
 
 + Clone this repo.
-+ Download these Python modules from [here][2] and make them available for local use.
++ Download the Python modules from [here][2] and make them available for local use.
 + Copy the `demo_dotnet_set_up_identity_settings.json` to `dotnet_set_up_identity_settings.json` and enter the data mentioned in the `Required data` section.
 + Execute `dotnet_set_up_identity.py`.
 
