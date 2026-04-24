@@ -21,6 +21,8 @@ The `dotnet_set_up_identity.py` script will:
 
 + Users must add the Python modules [here][2] to their system in order to run the script.
 + Users must be able to set up a MySQL database to use the login page. Set up and use of the database is beyond the scope of this document.
++ Users must have [Git][3] installed on their systems.
++ Users must have [.NET SDK 10][4] installed on their systems.
 
 # Warning
 
@@ -190,3 +192,5 @@ CREATE TABLE `AspNetUserTokens` (
 
 [1]: https://github.com/adhaliwal34/VariousDevelopment
 [2]: https://github.com/adhaliwal34/aj_python_modules
+[3]: https://git-scm.com/
+[4]: https://dotnet.microsoft.com/en-us/download
