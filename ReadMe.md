@@ -30,7 +30,6 @@ The `dotnet_set_up_identity.py` script will:
 
 # Required data
 
-+ Copy the `demo_dotnet_set_up_identity_settings.json` to `dotnet_set_up_identity_settings.json` and enter the following data:
 + `Git_exe` : Path to Git executable including executable name
 + `Dotnet_exe` : Path to dotnet executable including executable name
 + `Temp_dir` : Temp folder. Must exist. (To store a copy of various development files. Can be deleted after use)
@@ -40,31 +39,38 @@ The `dotnet_set_up_identity.py` script will:
 + `Minor_version` : MySQL DB minor version (e.g. "0" for "8.0.29)
 + `Patch_version` : MySQL DB patch version (e.g. "29" for "8.0.29)
 
+# How to use
+
++ Clone this repo.
++ Download these Python modules from [here][2] and make them available for local use.
++ Copy the `demo_dotnet_set_up_identity_settings.json` to `dotnet_set_up_identity_settings.json` and enter the data mentioned in the `Required data` section.
++ Execute `dotnet_set_up_identity.py`.
+
 # The script takes the following steps
 
 ## Downloads the VariousDevelopment repo files to a temporary directory
 
-+ Files are from the public [repo][1] and folder `Add_Identity_Asp_dotnet_10`
++ Files are from [this public repo][1] and folder `Add_Identity_Asp_dotnet_10`
 
 ## Adds <ProjectFolder>/Controllers/AccountsController.cs
 
-+ Moves file `<ProjectFolder>/Controllers/AccountsController.cs` from the repo.
++ Moves file to `<ProjectFolder>/Controllers/AccountsController.cs` from the repo.
 
 ## Adds <ProjectFolder>/Models/Accounts/AccountLoginViewModel.cs
 
-+ Moves file `<ProjectFolder>/Models/Accounts/AccountLoginViewModel.cs` from the repo.
++ Moves file to `<ProjectFolder>/Models/Accounts/AccountLoginViewModel.cs` from the repo.
 
 ## Adds <ProjectFolder>/Data/ApplicationDbContext.cs
 
-+ Moves file `<ProjectFolder>/Data/ApplicationDbContext.cs` from the repo.
++ Moves file to `<ProjectFolder>/Data/ApplicationDbContext.cs` from the repo.
 
 ## Adds <ProjectFolder>/Entities/AppUser.cs
 
-+ Moves file `<ProjectFolder>/Entities/AppUser.cs` from the repo.
++ Moves file to `<ProjectFolder>/Entities/AppUser.cs` from the repo.
 
 ## Adds <ProjectFolder>/Views/Accounts/Login.cshtml
 
-+ Moves file `<ProjectFolder>/Views/Accounts/Login.cshtml` from the repo.
++ Moves file to `<ProjectFolder>/Views/Accounts/Login.cshtml` from the repo.
 
 ## Modifies <ProjectFolder>/Views/Home/Index.cshtml
 
@@ -84,8 +90,8 @@ The `dotnet_set_up_identity.py` script will:
 
 ## Installs packages
 
-+ Install Microsoft.AspNetCore.Identity.EntityFrameworkCore
-+ Install Pomelo.EntityFrameworkCore.MySql
++ Installs Microsoft.AspNetCore.Identity.EntityFrameworkCore
++ Installs Pomelo.EntityFrameworkCore.MySql
 
 ## States remaining tasks for user
 
