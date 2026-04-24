@@ -25,9 +25,8 @@ The `dotnet_set_up_identity.py` script will:
 # Warning
 
 + **Note** The project folder files will be modified.
-+ Should be a newly minted MVC project without Identity.
-+ Should be an initialised Git repo to rollback changes if necessary.
-+ **Note** Files that are not tracked are also modified. Currently `appsettings.Development.json`
++ The project must be a newly minted MVC project without Identity.
++ **Note** Files that are not normally tracked by version control software e.g. Git are also modified. Currently `appsettings.Development.json`
 
 # Required data
 
@@ -43,52 +42,52 @@ The `dotnet_set_up_identity.py` script will:
 
 # The script takes the following steps
 
-## Download the VariousDevelopment repo files to a temporary directory
+## Downloads the VariousDevelopment repo files to a temporary directory
 
-+ Files are from the public repo `https://github.com/adhaliwal34/VariousDevelopment.git` folder `Add_Identity_Asp_dotnet_10`
++ Files are from the public [repo][1] and folder `Add_Identity_Asp_dotnet_10`
 
-## Add <ProjectFolder>/Controllers/AccountsController.cs
+## Adds <ProjectFolder>/Controllers/AccountsController.cs
 
-+ Create file `<ProjectFolder>/Controllers/AccountsController.cs` from [here][1].
++ Moves file `<ProjectFolder>/Controllers/AccountsController.cs` from the repo.
 
-## Add <ProjectFolder>/Models/Accounts/AccountLoginViewModel.cs
+## Adds <ProjectFolder>/Models/Accounts/AccountLoginViewModel.cs
 
-+ Create file `<ProjectFolder>/Models/Accounts/AccountLoginViewModel.cs` from [here][1].
++ Moves file `<ProjectFolder>/Models/Accounts/AccountLoginViewModel.cs` from the repo.
 
-## Add <ProjectFolder>/Data/ApplicationDbContext.cs
+## Adds <ProjectFolder>/Data/ApplicationDbContext.cs
 
-+ Create file `<ProjectFolder>/Data/ApplicationDbContext.cs` from [here][1].
++ Moves file `<ProjectFolder>/Data/ApplicationDbContext.cs` from the repo.
 
-## Add <ProjectFolder>/Entities/AppUser.cs
+## Adds <ProjectFolder>/Entities/AppUser.cs
 
-+ Create file `<ProjectFolder>/Entities/AppUser.cs` from [here][1].
++ Moves file `<ProjectFolder>/Entities/AppUser.cs` from the repo.
 
-## Add <ProjectFolder>/Views/Accounts/Login.cshtml
+## Adds <ProjectFolder>/Views/Accounts/Login.cshtml
 
-+ Create file `<ProjectFolder>/Views/Accounts/Login.cshtml` from [here][1].
++ Moves file `<ProjectFolder>/Views/Accounts/Login.cshtml` from the repo.
 
-## Modify <ProjectFolder>/Views/Home/Index.cshtml
+## Modifies <ProjectFolder>/Views/Home/Index.cshtml
 
-+ Add contents from [here][1] to `<ProjectFolder>/Views/Home/Index.cshtml`.
++ Add contents from the repo to `<ProjectFolder>/Views/Home/Index.cshtml`.
 
-## Modify <ProjectFolder>/Views/Shared/_Layout.cshtml
+## Modifies <ProjectFolder>/Views/Shared/_Layout.cshtml
 
-+ Add contents from [here][1] to `<ProjectFolder>/Views/Shared/_Layout.cshtml`.
++ Add contents from the repo to `<ProjectFolder>/Views/Shared/_Layout.cshtml`.
 
-## Modify <ProjectFolder>/appsettings.Development.json
+## Modifies <ProjectFolder>/appsettings.Development.json
 
-+ Add contents from [here][1] to `<ProjectFolder>/appsettings.Development.json`.
++ Add contents from the repo to `<ProjectFolder>/appsettings.Development.json`.
 
-## Modify <ProjectFolder>/Program.cs
+## Modifies <ProjectFolder>/Program.cs
 
-+ Add contents from [here][1] to `<ProjectFolder>/Program.cs`.
++ Add contents from the repo to `<ProjectFolder>/Program.cs`.
 
-## Install packages
+## Installs packages
 
 + Install Microsoft.AspNetCore.Identity.EntityFrameworkCore
 + Install Pomelo.EntityFrameworkCore.MySql
 
-## State remaining tasks for user
+## States remaining tasks for user
 
 + Set up MySQL database to use with project with db name and user name given in `appsettings.Development.json`.
 + Set <Server> in `appsettings.Development.json` for MySQL database.
