@@ -24,14 +24,16 @@ The `dotnet_set_up_identity.py` script will:
 + Users must have [Git][3] installed on their systems.
 + Users must have [.NET SDK 10][4] installed on their systems.
 
-# Warning
+# Warnings
 
-+ **Note** The project folder files will be modified.
++ The project folder files will be modified.
 + The project must be a newly minted MVC project without Identity.
-+ **Note** Files that are not normally tracked by version control software e.g. Git are also modified. Currently `appsettings.Development.json`
++ Files that are not normally tracked by version control software e.g. Git are also modified. Currently `appsettings.Development.json`
 
 # Required data
 
++ Copy `demo_dotnet_set_up_identity_settings.json` to `dotnet_set_up_identity_settings.json` in the same directory as the `dotnet_set_up_identity.py` Python script.
++ Populate `dotnet_set_up_identity_settings.json` with the data mentioned below:
 + `Git_exe` : Path to Git executable including executable name
 + `Dotnet_exe` : Path to dotnet executable including executable name
 + `Temp_dir` : Temp folder. Must exist. (To store a copy of various development files. Can be deleted after use)
@@ -45,7 +47,8 @@ The `dotnet_set_up_identity.py` script will:
 
 + Clone this repo.
 + Download the Python modules from [here][2] and make them available for local use.
-+ Copy the `demo_dotnet_set_up_identity_settings.json` to `dotnet_set_up_identity_settings.json` and enter the data mentioned in the `Required data` section.
++ Copy `demo_dotnet_set_up_identity_settings.json` to `dotnet_set_up_identity_settings.json` in the same directory as the `dotnet_set_up_identity.py` Python script.
++ Populate `dotnet_set_up_identity_settings.json` with the data mentioned in the `Required data` section.
 + Execute `dotnet_set_up_identity.py`.
 
 # The script takes the following steps
