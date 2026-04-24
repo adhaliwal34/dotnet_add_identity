@@ -57,39 +57,39 @@ The `dotnet_set_up_identity.py` script will:
 
 + Files are from [this public repo][1] and folder `Add_Identity_Asp_dotnet_10`
 
-## Adds <ProjectFolder>/Controllers/AccountsController.cs
+## Adds `<ProjectFolder>/Controllers/AccountsController.cs`
 
 + Moves file to `<ProjectFolder>/Controllers/AccountsController.cs` from the repo.
 
-## Adds <ProjectFolder>/Models/Accounts/AccountLoginViewModel.cs
+## Adds `<ProjectFolder>/Models/Accounts/AccountLoginViewModel.cs`
 
 + Moves file to `<ProjectFolder>/Models/Accounts/AccountLoginViewModel.cs` from the repo.
 
-## Adds <ProjectFolder>/Data/ApplicationDbContext.cs
+## Adds `<ProjectFolder>/Data/ApplicationDbContext.cs`
 
 + Moves file to `<ProjectFolder>/Data/ApplicationDbContext.cs` from the repo.
 
-## Adds <ProjectFolder>/Entities/AppUser.cs
+## Adds `<ProjectFolder>/Entities/AppUser.cs`
 
 + Moves file to `<ProjectFolder>/Entities/AppUser.cs` from the repo.
 
-## Adds <ProjectFolder>/Views/Accounts/Login.cshtml
+## Adds `<ProjectFolder>/Views/Accounts/Login.cshtml`
 
 + Moves file to `<ProjectFolder>/Views/Accounts/Login.cshtml` from the repo.
 
-## Modifies <ProjectFolder>/Views/Home/Index.cshtml
+## Modifies `<ProjectFolder>/Views/Home/Index.cshtml`
 
 + Add contents from the repo to `<ProjectFolder>/Views/Home/Index.cshtml`.
 
-## Modifies <ProjectFolder>/Views/Shared/_Layout.cshtml
+## Modifies `<ProjectFolder>/Views/Shared/_Layout.cshtml`
 
 + Add contents from the repo to `<ProjectFolder>/Views/Shared/_Layout.cshtml`.
 
-## Modifies <ProjectFolder>/appsettings.Development.json
+## Modifies `<ProjectFolder>/appsettings.Development.json`
 
 + Add contents from the repo to `<ProjectFolder>/appsettings.Development.json`.
 
-## Modifies <ProjectFolder>/Program.cs
+## Modifies `<ProjectFolder>/Program.cs`
 
 + Add contents from the repo to `<ProjectFolder>/Program.cs`.
 
@@ -101,8 +101,8 @@ The `dotnet_set_up_identity.py` script will:
 ## States remaining tasks for user
 
 + Set up MySQL database to use with project with db name and user name given in `appsettings.Development.json`.
-+ Set <Server> in `appsettings.Development.json` for MySQL database.
-+ Set <Password> in `appsettings.Development.json` for MySQL database.
++ Set `<Server>` in `appsettings.Development.json` for MySQL database.
++ Set `<Password>` in `appsettings.Development.json` for MySQL database.
 + Execute SQL to create various tables required by Identity and add the default app user.
 
 # Creating the Identity tables and a default user in DB
