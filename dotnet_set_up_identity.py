@@ -78,6 +78,7 @@ except subprocess.CalledProcessError as e:
     print("Exit code:", e.returncode)
     print("Stderr:", e.stderr)
 
+print("Moving/coping files to various locations...")
 # Add <ProjectFolder>/Controllers/AccountsController.cs
 
 add_file("Controllers", "AccountsController.cs", { "<ProjectName>" : PROJECT_NAME })
@@ -114,7 +115,10 @@ replace_file(None, "appsettings.Development.json", { "<ProjectName>" : PROJECT_N
 
 replace_file(None, "Program.cs", { "<ProjectName>" : PROJECT_NAME })
 
+print("Moving/coping files done.")
+
 # Install packages
+print("Installing packages...")
 
 args = [
     "add",
@@ -150,8 +154,12 @@ except subprocess.CalledProcessError as e:
     print("Exit code:", e.returncode)
     print("Stderr:", e.stderr)
 
+print("Installing packages done.")
+print("\nScript tasks complete.\n")
+
 # State remaining tasks for user
 
+print("Tasks remaining for user:")
 print(f"Delete contents of temp directory {TEMP_DIR}")
 print("Set up MySQL database to use with project with db name and user name given in appsettings.Development.json.")
 print("Set <Server> in appsettings.Development.json for MySQL database.")
