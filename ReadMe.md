@@ -1,10 +1,14 @@
 # ReadMe
 
-# Overview
+## Summary
+
+Add Identity to your new .NET 10 MVC projects without using scaffolding and migrations. On the downside users will have to set up a few things themselves (see the `Requirements` section) and the functionality provided is limited compared to the official method. However, it acts as a base for future development.
+
+## Overview
 
 The `dotnet_set_up_identity.py` Python script will add basic Identity functionality to a newly minted .NET 10 MVC project created using `dotnet new mvc -o <ProjectName>` e.g. `dotnet new mvc -o MyWebProject`.
 
-The following functionality will be added to the project by the script:
+Functionality added by the script:
 + A login page
 + A logout link
 + Some text on the home page that will only be seen by logged in users.
@@ -17,20 +21,20 @@ The `dotnet_set_up_identity.py` script will:
 + Install various required packages to your new project.
 + State next steps required to finish set up.
 
-# Requirements
+## Requirements
 
 + Users must add the Python modules [here][2] to their system in order to run the script.
 + Users must be able to set up a MySQL database to use the login page. Set up and use of the database is beyond the scope of this document.
 + Users must have [Git][3] installed on their systems.
 + Users must have [.NET SDK 10][4] installed on their systems.
 
-# Warnings
+## Warnings
 
 + The project folder files will be modified.
 + The project must be a newly minted MVC project without Identity.
 + Files that are not normally tracked by version control software e.g. Git are also modified. Currently `appsettings.Development.json`
 
-# Required data
+## Required data
 
 + Copy `demo_dotnet_set_up_identity_settings.json` to `dotnet_set_up_identity_settings.json` in the same directory as the `dotnet_set_up_identity.py` Python script.
 + Populate `dotnet_set_up_identity_settings.json` with the data mentioned below:
@@ -43,7 +47,7 @@ The `dotnet_set_up_identity.py` script will:
 + `Minor_version` : MySQL DB minor version (e.g. "0" for "8.0.29)
 + `Patch_version` : MySQL DB patch version (e.g. "29" for "8.0.29)
 
-# How to use
+## How to use
 
 + Clone this repo.
 + Download the Python modules from [here][2] and make them available for local use.
@@ -51,61 +55,34 @@ The `dotnet_set_up_identity.py` script will:
 + Populate `dotnet_set_up_identity_settings.json` with the data mentioned in the `Required data` section.
 + Execute `dotnet_set_up_identity.py`.
 
-# The script takes the following steps
+## The script takes the following steps
 
-## Downloads the VariousDevelopment repo files to a temporary directory
+#### Download files and move/copy files to various locations
 
-+ Files are from [this public repo][1] and folder `Add_Identity_Asp_dotnet_10`
++ Downloads the files from [this public repo][1], folder `Add_Identity_Asp_dotnet_10`, to a temporary directory.
++ Moves matching file from the repo to `<ProjectFolder>/Controllers/AccountsController.cs`.
++ Moves matching file from the repo to `<ProjectFolder>/Models/Accounts/AccountLoginViewModel.cs`.
++ Moves matching file from the repo to `<ProjectFolder>/Data/ApplicationDbContext.cs`.
++ Moves matching file from the repo to `<ProjectFolder>/Entities/AppUser.cs`.
++ Moves matching file from the repo to `<ProjectFolder>/Views/Accounts/Login.cshtml`.
++ Add matching file contents from the repo to `<ProjectFolder>/Views/Home/Index.cshtml`.
++ Add matching file contents from the repo to `<ProjectFolder>/Views/Shared/_Layout.cshtml`.
++ Add matching file contents from the repo to `<ProjectFolder>/appsettings.Development.json`.
++ Add matching file contents from the repo to `<ProjectFolder>/Program.cs`.
 
-## Adds `<ProjectFolder>/Controllers/AccountsController.cs`
-
-+ Moves file to `<ProjectFolder>/Controllers/AccountsController.cs` from the repo.
-
-## Adds `<ProjectFolder>/Models/Accounts/AccountLoginViewModel.cs`
-
-+ Moves file to `<ProjectFolder>/Models/Accounts/AccountLoginViewModel.cs` from the repo.
-
-## Adds `<ProjectFolder>/Data/ApplicationDbContext.cs`
-
-+ Moves file to `<ProjectFolder>/Data/ApplicationDbContext.cs` from the repo.
-
-## Adds `<ProjectFolder>/Entities/AppUser.cs`
-
-+ Moves file to `<ProjectFolder>/Entities/AppUser.cs` from the repo.
-
-## Adds `<ProjectFolder>/Views/Accounts/Login.cshtml`
-
-+ Moves file to `<ProjectFolder>/Views/Accounts/Login.cshtml` from the repo.
-
-## Modifies `<ProjectFolder>/Views/Home/Index.cshtml`
-
-+ Add contents from the repo to `<ProjectFolder>/Views/Home/Index.cshtml`.
-
-## Modifies `<ProjectFolder>/Views/Shared/_Layout.cshtml`
-
-+ Add contents from the repo to `<ProjectFolder>/Views/Shared/_Layout.cshtml`.
-
-## Modifies `<ProjectFolder>/appsettings.Development.json`
-
-+ Add contents from the repo to `<ProjectFolder>/appsettings.Development.json`.
-
-## Modifies `<ProjectFolder>/Program.cs`
-
-+ Add contents from the repo to `<ProjectFolder>/Program.cs`.
-
-## Installs packages
+#### Installs packages
 
 + Installs Microsoft.AspNetCore.Identity.EntityFrameworkCore
 + Installs Pomelo.EntityFrameworkCore.MySql
 
-## States remaining tasks for user
+#### States remaining tasks for user
 
 + Set up MySQL database to use with project with db name and user name given in `appsettings.Development.json`.
 + Set `<Server>` in `appsettings.Development.json` for MySQL database.
 + Set `<Password>` in `appsettings.Development.json` for MySQL database.
 + Execute SQL to create various tables required by Identity and add the default app user.
 
-# Creating the Identity tables and a default user in DB
+## Creating the Identity tables and a default user in DB
 
 + Create the seven tables required by the Identity functionality. Order matters:
 
